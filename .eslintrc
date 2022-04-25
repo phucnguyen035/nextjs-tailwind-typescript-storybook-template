@@ -1,0 +1,40 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:tailwindcss/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "tailwindcss/classnames-order": ["warn", { "officialSorting": true }],
+    "prettier/prettier": "error",
+    "import/no-anonymous-default-export": "off",
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "next",
+            "group": "builtin",
+            "position": "after"
+          },
+          {
+            "pattern": "~/**",
+            "group": "external"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}
