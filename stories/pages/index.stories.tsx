@@ -1,7 +1,7 @@
 import { expect } from '@storybook/jest';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
-import Home from '../../pages/index';
+import Home from '~/pages/index';
 
 export default {
   title: 'Pages/Home',
